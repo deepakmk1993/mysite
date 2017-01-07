@@ -26,7 +26,7 @@ SECRET_KEY = 'io8-l4qu$w#6%9k^vq^a+&qvmm0tjf%f#8%yncd*@yjzl)(d(4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['googlemysite.herokuapp.com/']
+ALLOWED_HOSTS = ['.herokuapp.com/']
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
@@ -125,5 +125,3 @@ TEMPLATE_DIRS = (
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATIC_ROOT = 'staticfiles'
