@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Welcome to my Blog {% endblock %}
+{% block content %}
+<section>
+    {% for post in posts %}
+    <article>
+        <h1><a href="/posts/{{ post.id }}/">{{ post.title }}</a></h1>
+        <p>{{ post.body }}</p>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}
