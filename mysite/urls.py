@@ -19,8 +19,8 @@ from django.contrib import admin
 from blog import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url(r'^$', views.view_posts, name='home-page'),
+    url(r'^admin/', admin.site.urls),
     url(r'^posts/$', views.view_posts, name='post-list'),
     url(r'^posts/(\d+)/$', views.view_post, name='post-detail'),
 ]
