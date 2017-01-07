@@ -8,10 +8,10 @@
 
     body{
       font-size: .9em;
-      text-align: justify;
-      margin: 0; padding: 10px;
-      font-family: "Muli";
 	    background: #eee;
+      font-family: "Muli", "Segoe UI";
+      text-align: justify;
+      margin: 0; padding: 15px;
     }
     a{
       text-decoration: none;
@@ -33,9 +33,8 @@
     }
     
     
-    
-    
-    
+/*===============================================================================*/    
+
     /*Giving Your Title an Animated Background*/
     .wrapper h2{
     	text-align: center;
@@ -45,6 +44,7 @@
     	margin: 0 auto;
     	position: relative;
     	height: 30px;
+	    font-style: italic;
     }
     
     .wrapper h2:after{
@@ -73,17 +73,76 @@
     }
     }
     /*End Giving Your Title an Animated Background*/
+
+/*===============================================================================*/    
     
+    /*Alternating Blockquotes*/
+    blockquote{
+    	margin: 0 auto;
+    	padding: 1em;
+    	border-left: 5px solid #79B473;
+    }
     
+    blockquote:not(:first-of-type){
+    	/* this styling applies to all blockquotes EXCEPT the first one */
+    	margin-top: .5em;
+    }
     
+    blockquote p{
+    	color: #555;
+    	font-size: 12pt;
+    	line-height: 1.4;
+    	font-family: 'Muli';
+    }
     
+    blockquote footer{
+    	margin-top: .5em;
+    	padding: 0;
+    	color: #777;
+    	font-size: 12pt;
+    	text-align: left;
+    	font-style: italic;
+    }
     
+    blockquote footer:before{
+    	content: '-'; /* this adds a dash before all the footer content */
+    }
     
+    blockquote:nth-of-type(even){
+    	/* this styling will apply to all even numbered bloquotes */
+    	text-align: right;
+    	border-left: none;
+    	border-right: 5px solid #41658A;
+    }
     
+    blockquote:nth-of-type(even) footer{
+    	text-align: right;
+    }
     
+    blockquote:nth-of-type(even) footer:before{
+    	content: '';
+    }
     
+    blockquote:nth-of-type(even) footer:after{
+    	content: ' -';
+    }
     
+    @element 'blockquote' and (min-width: 300px){
+    	blockquote{
+    		padding: 1em 20% 1em 1em;
+    	}
+    	blockquote p{
+    		font-size: 14px;
+    	}
+    	blockquote:nth-of-type(even){
+    		padding: 1em 1em 1em 20%;
+    	}
+    }
+    /*End Alternating Blockquotes*/
+
+/*===============================================================================*/
     
+
     /* for the ice cream and shadow */
     .icecream{
     	position: absolute;
@@ -152,20 +211,25 @@
     	border-left: 5vw solid transparent;
     	border-right: 5vw solid transparent;
     }
+
+/*===============================================================================*/
   </style>
 </head>
 <body>
   <div class="icecream">
-	<div class="ice"></div>
-	<div class="dot"></div>
-	<div class="dot"></div>
-	<div class="dot"></div>
-	<div class="waffle"></div>
-</div>
+  	<div class="ice"></div>
+  	<div class="dot"></div>
+  	<div class="dot"></div>
+  	<div class="dot"></div>
+  	<div class="waffle"></div>
+  </div>
+
+  <!--Giving Your Title an Animated Background-->
+  <div class="wrapper">
+    <h2>Welcome, to my blog!</h2>
+  </div>
+
   <nav>
-    <div class="wrapper">
-      <h2>Welcome, to my blog!</h2>
-    </div>
     <a href="{% url 'home-page' %}" class="brand">Home</a>
   </nav>
   <hr>

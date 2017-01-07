@@ -3,11 +3,12 @@
 {% block content %}
 <section>
     {% for post in posts %}
-    <article>
-        <h1><a href="/posts/{{ post.id }}/">{{ post.title }}</a></h1>
-        <p>{{ post.body|truncatechars:150 }}</p>
-        <a href="/posts/{{ post.id }}/">Read More</a>
-    </article>
+    <blockquote>
+    	<p><q><a href="/posts/{{ post.id }}/">{{ post.title }}</a></q></p>
+    	<footer>
+    	    {{ post.body|truncatechars:150 }} <br> <a href="/posts/{{ post.id }}/"><i>Read More</i></a>
+        </footer>
+    </blockquote>
     {% endfor %}
 </section>
 {% endblock %}
