@@ -5,7 +5,8 @@
     {% for post in posts %}
     <article>
         <h1><a href="/posts/{{ post.id }}/">{{ post.title }}</a></h1>
-        <p>{{ post.body }}</p>
+        <p>{{ post.body|truncatechars:150 }}</p>
+        <a href="/posts/{{ post.id }}/">Read More</a>
     </article>
     {% endfor %}
 </section>
