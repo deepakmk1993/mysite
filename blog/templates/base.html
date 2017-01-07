@@ -4,14 +4,14 @@
   <title>{% block title %}{% endblock %}</title>
   <meta http-equiv="refresh" content="2000" >
   <style>
+  @import url(https://fonts.googleapis.com/css?family=Muli:400,400italic);
+
     body{
       font-size: .9em;
-      font-weight: 600;
-      font-style: italic;
-      letter-spacing: 1px;
       text-align: justify;
       margin: 0; padding: 10px;
-      font-family: 'Segoe UI Light';
+      font-family: "Muli";
+	    background: #eee;
     }
     a{
       text-decoration: none;
@@ -23,7 +23,7 @@
       font-size: 2em;
     }
     .brand:hover{
-      color: red;
+      color: #41b7d8;
       text-decoration: none;
     }
     article{
@@ -31,6 +31,52 @@
       padding-top: 0;
       border-bottom: 1px solid blue;
     }
+    
+    
+    
+    
+    
+    /*Giving Your Title an Animated Background*/
+    .wrapper h2{
+    	text-align: center;
+    	text-transform: uppercase;
+    	letter-spacing: 1px;
+    	width: 300px;
+    	margin: 0 auto;
+    	position: relative;
+    	height: 30px;
+    }
+    
+    .wrapper h2:after{
+      /* create the background */
+      content: "";
+      display: block;
+      height: 160%;
+      width: 100%;
+      background: #9CFC97;
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      z-index: -1;
+      /* the animation rule specifies things like animation duration, direction, name, iteration, etc, but won't animate without using @keyframes */
+      animation: monAnim 1s infinite ease-in-out alternate;
+    }
+    
+    /* now we can use the @keyframes rule to carry out the animation code */
+    
+    @keyframes monAnim{
+    0%{
+    	transform: translateY(4px) translateX(-12px);
+    }
+    100%{
+    	transform: translateY(-12px) translateX(4px);
+    }
+    }
+    /*End Giving Your Title an Animated Background*/
+    
+    
+    
+    
     
     
     
@@ -117,6 +163,9 @@
 	<div class="waffle"></div>
 </div>
   <nav>
+    <div class="wrapper">
+      <h2>Welcome, to my blog!</h2>
+    </div>
     <a href="{% url 'home-page' %}" class="brand">Home</a>
   </nav>
   <hr>
