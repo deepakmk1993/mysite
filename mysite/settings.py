@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
 	'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	'NAME': '',
-	'USER': '',
-	'PASSWORD': '',
-	'HOST': '',
+	'NAME': 'blogdb',
+	'USER': 'postgres',
+	'PASSWORD': 'postgres',
+	'HOST': 'lcoalhost',
 	'PORT': '',
 }
 import dj_database_url
