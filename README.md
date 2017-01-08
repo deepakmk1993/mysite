@@ -72,3 +72,31 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         gunicorn==19.6.0
         psycopg2==2.6.2
         whitenoise==3.2.3
+
+## How To Use PostgreSQL with your Django Application
+==================================================
+    Start the PostgreSQL service
+    ----------------------------
+    sudo service postgresql start
+    
+    -----------------------
+    Connect to the service
+    -----------------------
+    sudo su - postgres
+    psql
+    
+    Create a PostgreSQL database
+    ----------------------------
+    Make sure you have logged into the PostgreSQL terminal and then you can just run:
+    
+    postgres=# CREATE DATABASE "groceries";
+    ------------------
+    List all databases
+    ------------------
+    postgres=# \list
+    
+    Set a password for your postgres user.
+    --------------------------------------
+    psql
+    postgres-# \password postgres
+    Enter new password:
