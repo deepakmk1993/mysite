@@ -122,6 +122,6 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
 
 [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
 
-if bool( os.environ.get('DJANGO_DEBUG', True) )
-	pass
-heroku config:set DJANGO_DEBUG=''
+    if bool( os.environ.get('DJANGO_DEBUG', True) )
+    	pass
+    heroku config:set DJANGO_DEBUG=''
