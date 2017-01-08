@@ -87,7 +87,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     Create a PostgreSQL database
     ----------------------------
     Make sure you have logged into the PostgreSQL terminal and then you can just run:
-    $ postgres=# CREATE DATABASE "groceries";
+    $ postgres=# CREATE DATABASE "DB_NAME";
     ------------------
     List all databases
     ------------------
