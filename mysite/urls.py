@@ -17,6 +17,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from blog import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^$', views.view_posts, name='home-page'),
@@ -24,3 +25,5 @@ urlpatterns = [
     url(r'^posts/$', views.view_posts, name='post-list'),
     url(r'^posts/(\d+)/$', views.view_post, name='post-detail'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
