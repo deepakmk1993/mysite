@@ -35,7 +35,19 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         db_from_env = dj_database_url.config(conn_max_age=500)
         DATABASES['default'].update(db_from_env)
 
-6) Serving static files in production
+6) WhiteNoise
+
+    $ pip install whitenoise
+    $ pip freeze > requirements.txt
+    
+    wsgi.py
+        from django.core.wsgi import get_wsgi_application
+        from whitenoise.django import DjangoWhiteNoise
+        
+        application = get_wsgi_application()
+        application = DjangoWhiteNoise(application)
+
+7) Serving static files in production
 
     $ pip install whitenoise
     $ pip freeze > requirements.txt
@@ -53,17 +65,6 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     )
     $ python manage.py collectstatic --noinput
 
-7) WhiteNoise
-
-    $ pip install whitenoise
-    $ pip freeze > requirements.txt
-    
-    wsgi.py
-        from django.core.wsgi import get_wsgi_application
-        from whitenoise.django import DjangoWhiteNoise
-        
-        application = get_wsgi_application()
-        application = DjangoWhiteNoise(application)
 
 8) Requirements
 
