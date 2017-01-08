@@ -49,8 +49,6 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
 
 7) Serving static files in production
 
-    $ pip install whitenoise
-    $ pip freeze > requirements.txt
     settings.py
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
     
