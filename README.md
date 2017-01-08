@@ -114,3 +114,8 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
+
+[Django Tutorial Part 11: Deploying Django to production](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
+[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql)
+[Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
