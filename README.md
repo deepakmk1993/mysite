@@ -7,17 +7,17 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     $ python manage.py createsuperuser
     $ python manage.py runserver $IP:$PORT
 
-3) Create Virtualenv
+2) Create Virtualenv
 
     $ virtualenv venv
     $ source venv/bin/activate
     $ pip freeze > requirements.txt
 
-4) Procfile
+3) Procfile
 
     $ web: gunicorn gettingstarted.wsgi --log-file -
 
-5) Database configuration
+4) Database configuration
 
     Install "psycopg" & "dj-database-url" with the following commands:
     $ sudo easy_install psycopg2
@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         import dj_database_url
         DATABASES['default'] =  dj_database_url.config()
 
-6) WhiteNoise
+5) WhiteNoise
 
     $ pip install whitenoise
     $ pip freeze > requirements.txt
@@ -42,7 +42,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         application = get_wsgi_application()
         application = DjangoWhiteNoise(application)
 
-7) Serving static files in production
+6) Serving static files in production
 
     settings.py
         PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -59,7 +59,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     $ python manage.py collectstatic --noinput
 
 
-8) Requirements
+7) Requirements
 
     $ pip freeze > requirements.txt
         Django==1.9
