@@ -95,6 +95,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     Enter new password:
     
     PostgreSQL DB Configuraton
+    --------------------------
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -103,5 +104,13 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
             'PASSWORD': 'password',
             'HOST': 'localhost',
             'PORT': '',
+        }
+    }
+    SQLite DB Configuraton
+    ----------------------
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
