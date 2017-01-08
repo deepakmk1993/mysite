@@ -3,7 +3,6 @@ venv
 staticfiles
 .env
 *.sqlite3
-
 *.egg-info
 *.pot
 *.py[co]
