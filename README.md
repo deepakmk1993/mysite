@@ -9,6 +9,3 @@ In case you want to run your Django application from the terminal just run:
 2) Run Django
 
     $ python manage.py runserver $IP:$PORT
-
-    $ git add -A && git commit -m "first commit" && git push -u origin master
-
