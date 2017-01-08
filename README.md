@@ -17,6 +17,18 @@ In case you want to run your Django application from the terminal just run:
     $ source venv/bin/activate
     $ pip freeze > requirements.txt
 
-4) Run Django
+4) Procfile
 
-    $ python manage.py runserver $IP:$PORT
+    $ web: gunicorn gettingstarted.wsgi --log-file -
+
+5) Database configuration
+
+    $ sudo easy_install psycopg2
+    $ sudo easy_install dj-database-url
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
+
+6) Serving static files in production
+
+    $ 
