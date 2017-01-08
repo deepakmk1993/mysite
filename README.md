@@ -27,6 +27,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
 
 5) Database configuration
 
+    Install "psycopg" & "dj-database-url" with the following commands:
     $ sudo easy_install psycopg2
     $ sudo easy_install dj-database-url
     settings.py
