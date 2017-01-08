@@ -99,3 +99,15 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     $ psql
     $ postgres-# \password postgres
     Enter new password:
+    
+    PostgreSQL DB Configuraton
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'DATABASE_Name',
+            'USER': 'myprojectuser',
+            'PASSWORD': 'password',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
