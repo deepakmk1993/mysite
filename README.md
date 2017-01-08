@@ -32,4 +32,17 @@ In case you want to run your Django application from the terminal just run:
 
 6) Serving static files in production
 
-    $ 
+    $ pip install whitenoise
+    $ pip freeze > requirements.txt
+    settings.py
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+    
+    # Static files (CSS, JavaScript, Images)
+    # https://docs.djangoproject.com/en/1.9/howto/static-files/
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATIC_URL = '/static/'
+    
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'static'),
+    )
