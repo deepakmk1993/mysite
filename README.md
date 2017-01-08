@@ -69,7 +69,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         whitenoise==3.2.3
 
 ## How To Use PostgreSQL with your Django Application
-==================================================
+
     Start the PostgreSQL service
     ----------------------------
     $ sudo service postgresql start
