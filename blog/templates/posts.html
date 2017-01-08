@@ -2,13 +2,30 @@
 {% block title %}Welcome to my Blog {% endblock %}
 {% block content %}
 <section>
-    {% for post in posts %}
-    <blockquote>
-    	<p><q><a href="/posts/{{ post.id }}/">{{ post.title }}</a></q></p>
-    	<footer>
-    	    {{ post.body|truncatechars:150 }} <br> <a href="/posts/{{ post.id }}/"><i>Read More</i></a>
-        </footer>
-    </blockquote>
-    {% endfor %}
+  {% for post in posts %}
+  <blockquote>
+  	<p><q><a href="/posts/{{ post.id }}/">{{ post.title }}</a></q></p>
+  	<footer>
+	    {{ post.body|truncatechars:150 }}<br>
+	    <a href="/posts/{{ post.id }}/"><i>Read More</i></a>
+    </footer>
+  </blockquote>
+  {% endfor %}
+  <br><br>
+  <div class="pagination">
+    <span class="step-links">
+      {% if posts.has_previous %}
+          <a href="?page={{ posts.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      <span class="current">
+          Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+      </span>
+
+      {% if posts.has_next %}
+          <a href="?page={{ posts.next_page_number }}">Next</a>
+      {% endif %}
+    </span>
+  </div>
 </section>
 {% endblock %}
