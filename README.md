@@ -2,14 +2,15 @@
 
 In case you want to run your Django application from the terminal just run:
 
-1) Run syncdb command to sync models to database and create Django's default superuser and auth system
+1) Run below command to sync models to database and create Django's default superuser and auth system and Run Django
 
     $ python manage.py migrate
     $ python manage.py createsuperuser
+    $ python manage.py runserver $IP:$PORT
 
 2) Run Django
 
-    $ python manage.py runserver $IP:$PORT
+    
 
 # Deploying Python and Django Apps on Heroku
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
