@@ -13,6 +13,7 @@ In case you want to run your Django application from the terminal just run:
 
 # Deploying Python and Django Apps on Heroku
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
+
 3) Create Virtualenv
 
     $ virtualenv venv
