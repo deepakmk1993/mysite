@@ -1,7 +1,7 @@
 venv
 staticfiles
 .env
-db.sqlite3
+*.sqlite3
 *.egg-info
 *.pot
 *.py[co]
