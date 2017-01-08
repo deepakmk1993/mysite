@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Post
 
 # Create your views here.
@@ -20,5 +20,5 @@ def view_posts(request):
 	return render(request, 'posts.html', {'posts': posts});
 
 def view_post(request, pk):
-	post = Post.objects.get(pk=pk);
+	post = get_object_or_404(Post, pk=pk);
 	return render(request, 'post.html', {'post': post});
