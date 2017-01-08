@@ -77,19 +77,17 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
 ==================================================
     Start the PostgreSQL service
     ----------------------------
-    sudo service postgresql start
-    
+    $ sudo service postgresql start
     -----------------------
     Connect to the service
     -----------------------
-    sudo su - postgres
-    psql
-    
+    $ sudo su - postgres
+    $ psql
+    ----------------------------
     Create a PostgreSQL database
     ----------------------------
     Make sure you have logged into the PostgreSQL terminal and then you can just run:
-    
-    postgres=# CREATE DATABASE "groceries";
+    $ postgres=# CREATE DATABASE "groceries";
     ------------------
     List all databases
     ------------------
