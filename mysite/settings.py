@@ -75,19 +75,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-import psycopg2
+
 DATABASES = {
     'default': {
-    	'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    	'NAME': '',
-    	'USER': '',
-    	'PASSWORD': '',
-    	'HOST': '',
-    	'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DATABASE_Name',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 import dj_database_url
-DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'])}
+DATABASES['default'] =  dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
