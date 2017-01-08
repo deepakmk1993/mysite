@@ -46,3 +46,16 @@ In case you want to run your Django application from the terminal just run:
     STATICFILES_DIRS = (
         os.path.join(PROJECT_ROOT, 'static'),
     )
+    $ python manage.py collectstatic --noinput
+
+6) WhiteNoise
+
+    $ pip install whitenoise
+    $ pip freeze > requirements.txt
+    
+    wsgi.py
+    from django.core.wsgi import get_wsgi_application
+    from whitenoise.django import DjangoWhiteNoise
+    
+    application = get_wsgi_application()
+    application = DjangoWhiteNoise(application)
