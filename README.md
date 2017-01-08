@@ -25,9 +25,9 @@ In case you want to run your Django application from the terminal just run:
 
     $ sudo easy_install psycopg2
     $ sudo easy_install dj-database-url
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 6) Serving static files in production
 
