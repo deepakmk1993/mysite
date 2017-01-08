@@ -92,9 +92,9 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     List all databases
     ------------------
     postgres=# \list
-    
+    --------------------------------------
     Set a password for your postgres user.
     --------------------------------------
-    psql
-    postgres-# \password postgres
+    $ psql
+    $ postgres-# \password postgres
     Enter new password:
