@@ -62,3 +62,8 @@ In case you want to run your Django application from the terminal just run:
 
 8) Requirements
     $ pip freeze > requirements.txt
+    Django==1.9
+    dj-database-url==0.4.2
+    gunicorn==19.6.0
+    psycopg2==2.6.2
+    whitenoise==3.2.3
