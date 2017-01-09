@@ -129,5 +129,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
-MEDIA_ROOT = 'media'
-MEDIA_URL = '/media/'
