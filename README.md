@@ -101,7 +101,7 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
     --------------------------
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'DATABASE_Name',
             'USER': 'myprojectuser',
             'PASSWORD': 'password',
