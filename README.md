@@ -56,6 +56,9 @@ ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127
         STATICFILES_DIRS = (
             os.path.join(PROJECT_ROOT, 'static'),
         )
+    mkdir static
+    Run below command if folder is empty because if your folder is empty then git doesn't commit them
+    touch static/.dir
     $ python manage.py collectstatic --noinput
 
 
