@@ -4,6 +4,8 @@ staticfiles
 *.sqlite3
 *.egg-info
 *.pot
+*.pyc
+*.pyo
 *.py[co]
 .tox/
 __pycache__
